@@ -148,6 +148,9 @@ main(int argc, char *argv[])
   testcall();
   testmem();
   testproc();
+  for(int i=0;i<8;i++){
+      printf("my student number is 20307130172\n");
+  }
   printf("sysinfotest: OK\n");
   exit(0);
 }
