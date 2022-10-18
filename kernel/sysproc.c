@@ -112,8 +112,8 @@ sys_sysinfo(void){
     struct sysinfo sysinfo;
     sysinfo.freemem=obtain_freememory();
     sysinfo.nproc=obtain_numbers();
-    if(copyout(p->pagetable, st, (char *)&sysinfo, sizeof(sysinfo)) < 0)
-        return -1;
+    if(copyout(p->pagetable, st, (char *)&sysinfo, sizeof(sysinfo)) < 0){
+        return -1;}
     return 0;
 }
 

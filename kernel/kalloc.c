@@ -89,7 +89,6 @@ int obtain_freememory()
     acquire(&kmem.lock);
     r = kmem.freelist;
     while(r){
-        kmem.freelist = r->next;
         count++;
         r = r->next;}
     release(&kmem.lock);
