@@ -22,6 +22,9 @@ int getpid(void);
 char* sbrk(int);
 int sleep(int);
 int uptime(void);
+int trace(void); // hint 2 add a prototype for the system call to user/user.h （modified by zxy
+
+
 
 // ulib.c
 int stat(const char*, struct stat*);
