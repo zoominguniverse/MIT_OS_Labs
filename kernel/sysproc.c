@@ -91,3 +91,9 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+//actions according to the hint
+uint64
+sys_trace{
+ printf("hello world");
+ return 0;
+};
