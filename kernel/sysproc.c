@@ -96,6 +96,7 @@ sys_trace(void)
 {
     int n;
     argint(0, &n);
+
     printf("First Print Try");
     return 0;
 }
