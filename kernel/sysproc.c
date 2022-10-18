@@ -102,7 +102,7 @@ sys_trace(void)
 }
 uint64
 sys_sysinfo(void){
-    printf("try to implement sysinfo");
+    printf("try to implement sysinfo\n");
     return 0;
 }
 
