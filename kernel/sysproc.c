@@ -110,6 +110,8 @@ sys_sysinfo(void){
     uint64 st;
     argaddr(0, &st);
     struct sysinfo sysinfo;
+    sysinfo.freemem=obtain_freememory();
+    sysinfo.nproc=obtain_numbers();
     if(copyout(p->pagetable, st, (char *)&sysinfo, sizeof(sysinfo)) < 0)
         return -1;
     return 0;
