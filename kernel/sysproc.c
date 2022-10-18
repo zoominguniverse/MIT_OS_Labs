@@ -93,7 +93,7 @@ sys_uptime(void)
 }
 //actions according to the hint
 uint64
-sys_trace{
+sys_trace(void){ // forget to add void
  printf("hello world");
  return 0;
 };
