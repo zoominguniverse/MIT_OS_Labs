@@ -142,10 +142,11 @@ syscall(void)
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
     // Use num to lookup the system call function for num, call it,
     // and store its return value in p->trapframe->a0
-    p->trapframe->a0 = syscalls[num]();
+    p->trapframe->a0 = syscalls[num]();//可以作为参考
     int mask=p->trace_mask;
     if(mask>>num&1){
-        printf("Syscall  %s\n",SyscallNames[num-1]);
+        //example 3: syscall read -> 1023
+        printf("%d: syscall %s -> %d",num,SyscallNames[num-1],p->trapframe->a0);
     }
   } else {
     printf("%d %s: unknown sys call %d\n",
