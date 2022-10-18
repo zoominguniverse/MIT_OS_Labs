@@ -585,7 +585,7 @@ wakeup(void *chan)
 // to user space (see usertrap() in trap.c).
 int
 kill(int pid)
-{
+{//仿写这里
   struct proc *p;
 
   for(p = proc; p < &proc[NPROC]; p++){
@@ -682,3 +682,15 @@ procdump(void)
     printf("\n");
   }
 }
+int obtain_numbers(){
+    struct proc *p;
+    int count=0;
+    for(p = proc; p < &proc[NPROC]; p++){
+        acquire(&p->lock);
+        if(p->state != UNUSED){
+            count++;
+        }
+        release(&p->lock);
+    }
+    return count;
+};
