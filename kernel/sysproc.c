@@ -96,8 +96,8 @@ sys_trace(void)
 {
     int n;
     argint(0, &n);
-
-    printf("First Print Try");
+    struct proc *p =myproc();
+    p->trace_mask=n;
     return 0;
 }
 
