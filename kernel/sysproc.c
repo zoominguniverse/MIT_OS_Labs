@@ -106,6 +106,7 @@ sys_trace(void)
 }
 uint64
 sys_sysinfo(void){
+    struct proc * p=myproc();
     uint64 st;
     argaddr(0, &st);
     struct sysinfo sysinfo;
