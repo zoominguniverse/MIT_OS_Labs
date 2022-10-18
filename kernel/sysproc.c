@@ -6,6 +6,10 @@
 #include "spinlock.h"
 #include "proc.h"
 #include "sysinfo.h"
+
+int obtain_numbers();
+int obtain_freememory();
+
 uint64
 sys_exit(void)
 {
