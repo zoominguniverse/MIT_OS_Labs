@@ -106,6 +106,9 @@ allocpid()
 // If found, initialize state required to run in the kernel,
 // and return with p->lock held.
 // If there are no free procs, or a memory allocation fails, return 0.
+
+//zxy marks here
+
 static struct proc*
 allocproc(void)
 {
@@ -152,6 +155,9 @@ found:
 // free a proc structure and the data hanging from it,
 // including user pages.
 // p->lock must be held.
+
+//zxy marks here
+
 static void
 freeproc(struct proc *p)
 {
@@ -173,6 +179,9 @@ freeproc(struct proc *p)
 
 // Create a user page table for a given process, with no user memory,
 // but with trampoline and trapframe pages.
+
+//zxy marks here
+
 pagetable_t
 proc_pagetable(struct proc *p)
 {
