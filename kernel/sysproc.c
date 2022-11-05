@@ -70,6 +70,8 @@ sys_sleep(void)
 }
 
 
+//Start by implementing sys_pgaccess() in kernel/sysproc.c.
+
 #ifdef LAB_PGTBL
 int
 sys_pgaccess(void)

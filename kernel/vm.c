@@ -86,6 +86,8 @@ kvminithart()
 //三级页表 实际上64位仅用了39位 = 3*9 + 12
 
 
+//walk() in kernel/vm.c is very useful for finding the right PTEs.
+
 pte_t *
 walk(pagetable_t pagetable, uint64 va, int alloc) //walk function
 {
@@ -463,6 +465,9 @@ copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)
 // put vmprint in vm.c
 // freewalk may be useful
 // freewalk 递归遍历实现了将页表置零后释放
+
+//vmprint() may come in handy to debug page tables.
+
 void
 vmprint(pagetable_t pagetable,uint64 depth) {
     //总共三层 递归返回即可

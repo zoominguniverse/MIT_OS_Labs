@@ -48,6 +48,8 @@ ugetpid_test()
   printf("ugetpid_test: OK\n");
 }
 
+//Read pgaccess_test() in user/pgtlbtest.c to see how pgaccess is used.
+
 void
 pgaccess_test()
 {

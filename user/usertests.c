@@ -73,6 +73,10 @@ copyin(char *s)
 
 // what if you pass ridiculous pointers to system calls
 // that write user memory with copyout?
+
+//For the output bitmask, it's easier to store a temporary buffer
+// in the kernel and copy it to the user (via copyout()) after filling it with the right bits.
+
 void
 copyout(char *s)
 {
