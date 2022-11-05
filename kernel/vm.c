@@ -505,6 +505,16 @@ vmprint(pagetable_t pagetable,uint64 depth) {
 }
 int
 vmpgaccess(pagetable_t pagetable,uint64 va){
-    return 0;
 
+    pte_t *pte;
+
+    if(va >= MAXVA)
+        return 0;
+
+    pte = walk(pagetable, va, 0);
+    if(pte == 0)
+        return 0;
+    if((*pte & PTE_A) != 0)
+        return 1;
+    return 0;
 }
