@@ -343,6 +343,7 @@ typedef uint64 *pagetable_t; // 512 PTEs
 #define PTE_W (1L << 2)
 #define PTE_X (1L << 3)
 #define PTE_U (1L << 4) // user can access
+#define PTE_A (1L << 6) //根据操作手册上的内容进行设置
 
 //You'll need to define PTE_A, the access bit, in kernel/riscv.h.
 //需要一个定义 以及检查过后需要清理这个位
