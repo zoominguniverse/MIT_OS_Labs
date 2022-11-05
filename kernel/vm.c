@@ -82,8 +82,12 @@ kvminithart()
 //   21..29 -- 9 bits of level-1 index.
 //   12..20 -- 9 bits of level-0 index.
 //    0..11 -- 12 bits of byte offset within the page.
+
+//三级页表 实际上64位仅用了39位 = 3*9 + 12
+
+
 pte_t *
-walk(pagetable_t pagetable, uint64 va, int alloc)
+walk(pagetable_t pagetable, uint64 va, int alloc) //walk function
 {
   if(va >= MAXVA)
     panic("walk");
@@ -91,7 +95,9 @@ walk(pagetable_t pagetable, uint64 va, int alloc)
   for(int level = 2; level > 0; level--) {
     pte_t *pte = &pagetable[PX(level, va)];
     if(*pte & PTE_V) {
+        //#define PTE_V (1L << 0) // valid
       pagetable = (pagetable_t)PTE2PA(*pte);
+      //#define PTE2PA(pte) (((pte) >> 10) << 12)
     } else {
       if(!alloc || (pagetable = (pde_t*)kalloc()) == 0)
         return 0;
@@ -142,19 +148,32 @@ kvmmap(pagetable_t kpgtbl, uint64 va, uint64 pa, uint64 sz, int perm)
 
 // use clion ctrl+shift+f to find function mappages definition
 
+//mappage作用是为某个指向特定的物理地址的虚拟地址分配页表项
+//va以及size可能不是页对齐的
+
+
+
 int
 mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)
 {
   uint64 a, last;
   pte_t *pte;
-
+  //pte_t 也即是 uint64
   if(size == 0)
     panic("mappages: size");
   
   a = PGROUNDDOWN(va);
+  //pgrounddown 暂停营业
+  //找到了这个定义
+  //#define PGROUNDDOWN(a) (((a)) & ~(PGSIZE-1)) //mappages use this define
+  //以及相反的
+  //#define PGROUNDUP(sz)  (((sz)+PGSIZE-1) & ~(PGSIZE-1))
+  //两者分别是将地址四舍五入为PGSIZE的较低倍数地址 或者 PGSIZE的较高倍数地址
   last = PGROUNDDOWN(va + size - 1);
   for(;;){
     if((pte = walk(pagetable, a, 1)) == 0)
+        //在此调用了一个walk函数
+        //walk 函数通过三级页表查询或分配页
       return -1;
     if(*pte & PTE_V)
       panic("mappages: remap");
