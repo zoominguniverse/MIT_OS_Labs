@@ -479,7 +479,7 @@ vmprint(pagetable_t pagetable,uint64 depth) {
         if(pte & PTE_V){
             // this PTE points to a lower-level page table.
             //前面的 ..
-            for(int j=0;j<i+1;j++){
+            for(int j=0;j<depth+1;j++){
                 printf(" ..");
             }
             uint64 child = PTE2PA(pte);
