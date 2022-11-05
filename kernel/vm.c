@@ -118,6 +118,8 @@ walk(pagetable_t pagetable, uint64 va, int alloc) //walk function
 // Look up a virtual address, return the physical address,
 // or 0 if not mapped.
 // Can only be used to look up user pages.
+
+//useful！！
 uint64
 walkaddr(pagetable_t pagetable, uint64 va)
 {
