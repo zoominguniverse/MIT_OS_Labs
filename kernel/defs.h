@@ -175,6 +175,9 @@ int             copyin(pagetable_t, char *, uint64, uint64);
 int             copyinstr(pagetable_t, char *, uint64, uint64);
 //修改defs.h 文件增加 vmprint函数定义 以便可以exec.c调用
 void            vmprint(pagetable_t,uint64);
+//修改defs.h 文件增加 vmpgaccess函数定义 以便可以方便得到每一个页的位是否被访问
+int             vmpgaccess(pagetable_t ,uint64);
+
 
 
 // plic.c

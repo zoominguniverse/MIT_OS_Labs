@@ -501,3 +501,8 @@ vmprint(pagetable_t pagetable,uint64 depth) {
         }
     }
 }
+int
+vmpgaccess(pagetable_t pagetable,uint64 va){
+    return 0;
+
+}
