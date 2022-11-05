@@ -97,7 +97,7 @@ sys_pgaccess(void)
     //我们可以测试一下 先不对其进行置位 直接写一个值 之后再调用的时候打印一下bitmasks 之后运行一下能否是我们设置的1010
     struct proc *p = myproc();
 
-    int res = 0b1010;
+    int res = 0x1010; //此处0b的话会打印A 不是想要的 我们应当和32位保持一致
 
     if(copyout(p->pagetable, bitmasks, (char *)&res, sizeof(res)) < 0){
       return -1;
