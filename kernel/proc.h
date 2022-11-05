@@ -100,6 +100,8 @@ struct proc {
   uint64 sz;                   // Size of process memory (bytes)
   pagetable_t pagetable;       // User page table
   struct trapframe *trapframe; // data page for trampoline.S
+  //因为trapframe用到了这个结构体 usyscall也得把它的结构体添加进去
+  struct usyscall  *usyscall;
   struct context context;      // swtch() here to run process
   struct file *ofile[NOFILE];  // Open files
   struct inode *cwd;           // Current directory

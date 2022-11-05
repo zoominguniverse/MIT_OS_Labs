@@ -134,6 +134,14 @@ found:
     release(&p->lock);
     return 0;
   }
+  //Don't forget to allocate and initialize the page in allocproc().
+  //为USYSCALL 分配内存 照葫芦画瓢
+  //这句判断是如果分配失败了 就释放掉已经申请的内存
+  if((p->usyscall = (struct usyscall *)kalloc()) == 0){
+    freeproc(p);
+    release(&p->lock);
+    return 0;
+  }
 
   // An empty user page table.
   p->pagetable = proc_pagetable(p);
@@ -148,6 +156,8 @@ found:
   memset(&p->context, 0, sizeof(p->context));
   p->context.ra = (uint64)forkret;
   p->context.sp = p->kstack + PGSIZE;
+  //把分配的进程号存到用户空间的这个结构体内
+  p->usyscall->pid = p->pid;
 
   return p;
 }
@@ -218,7 +228,7 @@ proc_pagetable(struct proc *p)
   //Choose permission bits that allow userspace to only read the page
   //user只能读 那么只分配PTE_R
   if(mappages(pagetable, USYSCALL, PGSIZE,
-            (uint64)(p->trapframe), PTE_R ) < 0){
+            (uint64)(p->usyscall), PTE_R ) < 0){
     uvmunmap(pagetable, TRAPFRAME, 1, 0);
     uvmfree(pagetable, 0);
     return 0;
