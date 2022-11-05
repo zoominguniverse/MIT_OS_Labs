@@ -7,7 +7,7 @@
 #include "proc.h"
 
 //因为需要vm.c里面的辅助函数
-#inlclude"vm.c"
+#include"vm.c"
 
 uint64
 sys_exit(void)
@@ -102,8 +102,10 @@ sys_pgaccess(void)
 
     //int res = 0x1010; //此处0b的话会打印A 不是想要的 我们应当和32位保持一致
     int res = 0;
+    uint64 abits;
+    uint64 va;
     for(int i=0;i<len;i++){
-        va+=PGSIZE; //确认每一个页
+        va=PGSIZE*i+addr; //确认每一个页
         abits = vmpgaccess(p->pagetable,va)<<i;
         res|=abits;
     }
