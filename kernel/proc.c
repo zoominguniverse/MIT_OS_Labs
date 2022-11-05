@@ -232,8 +232,9 @@ proc_pagetable(struct proc *p)
   //Choose permission bits that allow userspace to only read the page
   //user只能读 那么只分配PTE_R
   if(mappages(pagetable, USYSCALL, PGSIZE,
-            (uint64)(p->usyscall), PTE_R ) < 0){
+            (uint64)(p->usyscall), PTE_R | PTE_U ) < 0){
     //这个一开始大意了 上面的是依次释放 就是说一个初始化失败 前面成功的都得释放
+    //一般来说 所给权限要加上PTE_U xv6课本上也有
     uvmunmap(pagetable,USYSCALL,1,0);
     uvmunmap(pagetable, TRAPFRAME, 1, 0);
     uvmfree(pagetable, 0);
