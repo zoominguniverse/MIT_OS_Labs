@@ -174,8 +174,12 @@ freeproc(struct proc *p)
   if(p->trapframe)
     kfree((void*)p->trapframe);
   p->trapframe = 0;
+  if(p->usyscall)
+    kfree((void*)p->usyscall);
+  p->usyscall = 0;
   if(p->pagetable)
     proc_freepagetable(p->pagetable, p->sz);
+  //这里面调用了freepagetable 我们看一下 发现蹦床 + trapframe都有unmap动作 那么usyscall也需要有相应的动作
   p->pagetable = 0;
   p->sz = 0;
   p->pid = 0;
@@ -245,6 +249,8 @@ proc_freepagetable(pagetable_t pagetable, uint64 sz)
 {
   uvmunmap(pagetable, TRAMPOLINE, 1, 0);
   uvmunmap(pagetable, TRAPFRAME, 1, 0);
+  //ummap usyscall
+  uvmunmap(pagetable,USYSCALL,1,0);
   uvmfree(pagetable, sz);
 }
 
