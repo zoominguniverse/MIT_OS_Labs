@@ -233,6 +233,8 @@ proc_pagetable(struct proc *p)
   //user只能读 那么只分配PTE_R
   if(mappages(pagetable, USYSCALL, PGSIZE,
             (uint64)(p->usyscall), PTE_R ) < 0){
+    //这个一开始大意了 上面的是依次释放 就是说一个初始化失败 前面成功的都得释放
+    uvmunmap(pagetable,USYSCALL,1,0);
     uvmunmap(pagetable, TRAPFRAME, 1, 0);
     uvmfree(pagetable, 0);
     return 0;
