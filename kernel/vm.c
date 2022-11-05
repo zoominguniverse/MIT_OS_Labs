@@ -465,7 +465,7 @@ copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)
 // freewalk 递归遍历实现了将页表置零后释放
 void
 vmprint(pagetable_t pagetable,uint64 depth){
-    print("page table test")
+    print("page table test");
     // there are 2^9 = 512 PTEs in a page table.
 //    for(int i = 0; i < 512; i++){
 //        pte_t pte = pagetable[i];
