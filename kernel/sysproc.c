@@ -104,7 +104,7 @@ sys_pgaccess(void)
     int res = 0;
     uint64 abits;
     uint64 va;
-    for(int i=0;i<len;i++){
+    for(int i=0;i<num;i++){
         va=PGSIZE*i+addr; //确认每一个页
         abits = vmpgaccess(p->pagetable,va)<<i;
         res|=abits;
