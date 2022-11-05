@@ -464,20 +464,28 @@ copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)
 // freewalk may be useful
 // freewalk 递归遍历实现了将页表置零后释放
 void
-vmprint(pagetable_t pagetable,uint64 depth){
-    printf("page table test");
+vmprint(pagetable_t pagetable,uint64 depth) {
+    //总共三层 递归返回即可
+    if (depth >= 3) {
+        return;
+    }
+    if (depth == 0) {
+    printf("page table %p\n", pagetable);
+    }
     // there are 2^9 = 512 PTEs in a page table.
-//    for(int i = 0; i < 512; i++){
-//        pte_t pte = pagetable[i];
-//        if((pte & PTE_V) && (pte & (PTE_R|PTE_W|PTE_X)) == 0){
-//            // this PTE points to a lower-level page table.
-//            print()
-//            uint64 child = PTE2PA(pte);
-//            freewalk((pagetable_t)child);
-//            pagetable[i] = 0;
-//        } else if(pte & PTE_V){
-//            panic("freewalk: leaf");
-//        }
-//    }
-//    kfree((void*)pagetable);
+    for(int i = 0; i < 512; i++){
+        pte_t pte = pagetable[i];
+        //如果有效据按照格式打印即可
+        if(pte & PTE_V){
+            // this PTE points to a lower-level page table.
+            //前面的 ..
+            for(int j=0;j<i+1;j++){
+                printf(" ..");
+            }
+            uint64 child = PTE2PA(pte);
+            printf("%d: pte %p pa %p\n",i,pte,child);
+            //递归调用即可
+            vmprint(pagetable,depth+1);
+        }
+    }
 }
