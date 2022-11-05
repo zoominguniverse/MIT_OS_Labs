@@ -7,7 +7,7 @@
 #include "proc.h"
 
 //因为需要vm.c里面的辅助函数
-#include"vm.c"
+//#include"vm.c"
 
 uint64
 sys_exit(void)
