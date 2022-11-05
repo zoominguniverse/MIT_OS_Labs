@@ -85,11 +85,21 @@ sys_pgaccess(void)
     argaddr(0, &addr);
     int num;
     argint(1, &num);
+    //第五个提示说我们可以对len保护一下 设置上限 我们就此保护一下
+    if(num>32||num<0){
+        return -1;
+    }
     uint64 bitmasks;
     argaddr(2, &bitmasks);
-    //
-
-
+    //第四个提示说到我们需要用到copyout进行传参 如果在内核中被调用完毕 我们需要把它返回用户态
+    //我们用到的copyout函数是那个vm.c里面的copyout函数 详见其中注释
+    //我们需要获取当前进程的页表 以便对他操作 以及对copyout操作
+    //我们可以测试一下 先不对其进行置位 直接写一个值 之后再调用的时候打印一下bitmasks 之后运行一下能否是我们设置的1010
+    struct proc *p = myproc();
+    res = 0b1010;
+    if(copyout(p->pagetable, bitmasks, (char *)&res, sizeof(res)) < 0){
+      return -1;
+    }
   // lab pgtbl: your code here.
     return 0;
 }
