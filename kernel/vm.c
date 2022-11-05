@@ -87,6 +87,11 @@ kvminithart()
 
 
 //walk() in kernel/vm.c is very useful for finding the right PTEs.
+//我们来看walk()函数具体做了什么事情
+//walk函数接收三个参数 pagetable 一个虚拟地址 一个alloc参数
+//简而言之就是在页表中找到虚拟地址对应的物理页并返回其入口
+//如果不是valid的话并且alloc为真 就给他分配一个真正的物理页并且做了level映射 也就是三次映射
+//修改其映射关系
 
 pte_t *
 walk(pagetable_t pagetable, uint64 va, int alloc) //walk function
