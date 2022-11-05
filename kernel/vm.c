@@ -515,6 +515,7 @@ vmpgaccess(pagetable_t pagetable,uint64 va){
     if(pte == 0)
         return 0;
     if((*pte & PTE_A) != 0)
+        *pte &=~PTE_A; // reset PTE_A
         return 1;
     return 0;
 }
