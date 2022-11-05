@@ -71,13 +71,27 @@ sys_sleep(void)
 
 
 //Start by implementing sys_pgaccess() in kernel/sysproc.c.
-
+//这个系统调用函数 之前有写过sysinfo也是一样的 我们需要得到参数 第二条提示也给我们说了
+//我们需要得到地址以及int数据
+//因为它pgaccess_test()里面是三个参数
+//第一个是要检查的第一个地址 第二个是要检查的页的数量 第三个是结果bitmasks（也就是有没有被正确设置位
+//我们仿照上面的代码实现即可 sys_wait() sys_sleep()
 #ifdef LAB_PGTBL
 int
 sys_pgaccess(void)
 {
+    //分别转化前三个参数即可
+    uint64 addr;
+    argaddr(0, &addr);
+    int num;
+    argint(1, &num);
+    uint64 bitmasks;
+    argaddr(2, &bitmasks);
+    //
+
+
   // lab pgtbl: your code here.
-  return 0;
+    return 0;
 }
 #endif
 
