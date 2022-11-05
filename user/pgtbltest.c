@@ -49,6 +49,9 @@ ugetpid_test()
 }
 
 //Read pgaccess_test() in user/pgtlbtest.c to see how pgaccess is used.
+//首先分配了32个内存页 访问其中的1、2、30号页表
+//如果调用的函数pgaccess不return0 或者是最后的标志位设置的不正确 那么久failed或者incorrect access bits set
+//最后free掉内存
 
 void
 pgaccess_test()
