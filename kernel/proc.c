@@ -211,6 +211,20 @@ proc_pagetable(struct proc *p)
     return 0;
   }
 
+
+  //照葫芦画瓢
+  // map the USYSCALL page just below the trampoline page
+  //蹦床页放的是代码主要是读和执行 trapframe主要是读写
+  //Choose permission bits that allow userspace to only read the page
+  //user只能读 那么只分配PTE_R
+  if(mappages(pagetable, USYSCALL, PGSIZE,
+            (uint64)(p->trapframe), PTE_R ) < 0){
+    uvmunmap(pagetable, TRAPFRAME, 1, 0);
+    uvmfree(pagetable, 0);
+    return 0;
+  }
+
+
   return pagetable;
 }
 

@@ -69,9 +69,16 @@
 //   USYSCALL (shared with kernel)
 //   TRAPFRAME (p->trapframe, used by the trampoline)
 //   TRAMPOLINE (the same page as in the kernel)
+
+//  用户内存空间大概长上面这样子
+//  蹦床页和trapframe在proc.c 已经被初始化
+//  我们需要的就是照葫芦画瓢初始化USYSCALL
+
 #define TRAPFRAME (TRAMPOLINE - PGSIZE)
-#ifdef LAB_PGTBL
+//#ifdef LAB_PGTBL
+//这个ifdef 不注释掉下面没办法搞
 #define USYSCALL (TRAPFRAME - PGSIZE)
+//这里有 USYSCALL的定义
 
 struct usyscall {
   int pid;  // Process ID
