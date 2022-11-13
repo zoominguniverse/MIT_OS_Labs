@@ -12,7 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="实现一波儿打印返回地址和上一个栈帧地址" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="遍历时更新栈帧出现问题 导致循环打印&#10;这时候我们需要更新frame而不是fp&#10;这里用到了一个技巧就是frame[-1]直接-8bytes了&#10;因为frame是uint64的&#10;修改错误之后我们可得">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/printf.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +71,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="8772000" />
+      <workItem from="1668325471170" duration="9174000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -210,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668350799833</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="遍历时更新栈帧出现问题 导致循环打印&#10;这时候我们需要更新frame而不是fp&#10;这里用到了一个技巧就是frame[-1]直接-8bytes了&#10;因为frame是uint64的&#10;修改错误之后我们可得">
+      <created>1668351468400</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1668351468400</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +269,7 @@
     <MESSAGE value="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅/ .ℎ。这些数字有助于backtrace终止其遍历。" />
     <MESSAGE value="实现了函数调用栈的上下界确定" />
     <MESSAGE value="实现一波儿打印返回地址和上一个栈帧地址" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现一波儿打印返回地址和上一个栈帧地址" />
+    <MESSAGE value="遍历时更新栈帧出现问题 导致循环打印&#10;这时候我们需要更新frame而不是fp&#10;这里用到了一个技巧就是frame[-1]直接-8bytes了&#10;因为frame是uint64的&#10;修改错误之后我们可得" />
+    <option name="LAST_COMMIT_MESSAGE" value="遍历时更新栈帧出现问题 导致循环打印&#10;这时候我们需要更新frame而不是fp&#10;这里用到了一个技巧就是frame[-1]直接-8bytes了&#10;因为frame是uint64的&#10;修改错误之后我们可得" />
   </component>
 </project>
