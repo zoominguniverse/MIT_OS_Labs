@@ -12,9 +12,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="Add $U/_trace to UPROGS in Makefile">
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="按照第五六题问题&#10;添加这三行代码">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/call.c" beforeDir="false" afterPath="$PROJECT_DIR$/user/call.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +70,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="23000" />
+      <workItem from="1668325471170" duration="2278000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -122,7 +121,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666081528553</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="按照第五六题问题&#10;添加这三行代码">
+      <created>1668325781896</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668325781896</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +164,7 @@
     <MESSAGE value="Add a sys_trace() function in kernel/sysproc.c that implements the new system call by remembering its argument in a new variable in the proc structure (see kernel/proc.h). The functions to retrieve system call arguments from user space are in kernel/syscall.c, and you can see examples of their use in kernel/sysproc.c." />
     <MESSAGE value="adjust  mistakes(forget to add (void) to make a function" />
     <MESSAGE value="Add $U/_trace to UPROGS in Makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add $U/_trace to UPROGS in Makefile" />
+    <MESSAGE value="按照第五六题问题&#10;添加这三行代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="按照第五六题问题&#10;添加这三行代码" />
   </component>
 </project>
