@@ -152,5 +152,5 @@ backtrace()
         frame = (uint64 *) saved_fp;
         fp = saved_fp;
     }
-    printf("backtrace here\n");
+//    printf("backtrace here\n");
 }
