@@ -12,7 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="依旧是为了避免出现那个workspace不一致的问题" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0.">
+      <change beforePath="$PROJECT_DIR$/kernel/riscv.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/riscv.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +70,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="3759000" />
+      <workItem from="1668325471170" duration="4130000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -182,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668329678093</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0.">
+      <created>1668329923263</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1668329923263</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,6 +236,7 @@
     <MESSAGE value="调用的时候要加；" />
     <MESSAGE value="The GCC compiler stores the frame pointer of the currently executing function in the register s0" />
     <MESSAGE value="依旧是为了避免出现那个workspace不一致的问题" />
-    <option name="LAST_COMMIT_MESSAGE" value="依旧是为了避免出现那个workspace不一致的问题" />
+    <MESSAGE value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
+    <option name="LAST_COMMIT_MESSAGE" value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
   </component>
 </project>
