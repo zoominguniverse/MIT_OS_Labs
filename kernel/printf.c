@@ -137,5 +137,7 @@ printfinit(void)
 void
 backtrace()
 {
-printf("backtrace here\n");
+    uint64 s0;
+    s0 = r_fp();
+    printf("backtrace here\n");
 }
