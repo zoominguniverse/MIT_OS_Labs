@@ -12,9 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="按照第五六题问题&#10;添加这三行代码">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="打印一些信息" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +68,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="2278000" />
+      <workItem from="1668325471170" duration="2581000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -128,7 +126,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668325781896</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implement a backtrace() function in kernel/printf.c">
+      <created>1668328442540</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668328442540</updated>
+    </task>
+    <task id="LOCAL-00010" summary="打印一些信息">
+      <created>1668328519702</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668328519702</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +177,8 @@
     <MESSAGE value="adjust  mistakes(forget to add (void) to make a function" />
     <MESSAGE value="Add $U/_trace to UPROGS in Makefile" />
     <MESSAGE value="按照第五六题问题&#10;添加这三行代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="按照第五六题问题&#10;添加这三行代码" />
+    <MESSAGE value="Implement a backtrace() function in kernel/printf.c" />
+    <MESSAGE value="打印一些信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="打印一些信息" />
   </component>
 </project>
