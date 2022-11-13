@@ -137,5 +137,5 @@ printfinit(void)
 void
 backtrace()
 {
-
+printf("backtrace here\n");
 }
