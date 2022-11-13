@@ -12,8 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0.">
-      <change beforePath="$PROJECT_DIR$/kernel/riscv.h" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/riscv.h" afterDir="false" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘/𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑟𝑟.ℎ。这些数字有助于backtrace终止其遍历。">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/printf.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="4130000" />
+      <workItem from="1668325471170" duration="8087000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -191,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668329923263</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘𝑘/𝑟𝑟𝑟𝑟𝑟𝑟𝑟𝑟 𝑟𝑟.ℎ。这些数字有助于backtrace终止其遍历。">
+      <created>1668330171413</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1668330171413</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +245,7 @@
     <MESSAGE value="The GCC compiler stores the frame pointer of the currently executing function in the register s0" />
     <MESSAGE value="依旧是为了避免出现那个workspace不一致的问题" />
     <MESSAGE value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
-    <option name="LAST_COMMIT_MESSAGE" value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
+    <MESSAGE value="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅/ .ℎ。这些数字有助于backtrace终止其遍历。" />
+    <option name="LAST_COMMIT_MESSAGE" value="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅/ .ℎ。这些数字有助于backtrace终止其遍历。" />
   </component>
 </project>

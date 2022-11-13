@@ -137,7 +137,12 @@ printfinit(void)
 void
 backtrace()
 {
-    uint64 s0;
-    s0 = r_fp();
+    uint64 fp;
+    fp = r_fp();
+    uint64 up = PGROUNDUP(fp);
+    uint64 down = PGROUNDDOWN(fp);
+    while(fp<up&&fp>down){
+
+    }
     printf("backtrace here\n");
 }
