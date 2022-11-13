@@ -12,9 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="实现了函数调用栈的上下界确定">
-      <change beforePath="$PROJECT_DIR$/kernel/printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/printf.c" afterDir="false" />
-    </list>
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="实现一波儿打印返回地址和上一个栈帧地址" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +68,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="8419000" />
+      <workItem from="1668325471170" duration="8772000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -205,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668350432625</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="实现一波儿打印返回地址和上一个栈帧地址">
+      <created>1668350799833</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1668350799833</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,6 +258,7 @@
     <MESSAGE value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
     <MESSAGE value="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅/ .ℎ。这些数字有助于backtrace终止其遍历。" />
     <MESSAGE value="实现了函数调用栈的上下界确定" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现了函数调用栈的上下界确定" />
+    <MESSAGE value="实现一波儿打印返回地址和上一个栈帧地址" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现一波儿打印返回地址和上一个栈帧地址" />
   </component>
 </project>

@@ -148,7 +148,7 @@ backtrace()
         uint64 saved_fp = frame[-2];
         printf("return address:%p\n",ra);
         printf("saved frame pointer:%p\n",saved_fp);
-        fp = saved_fp;
+        frame = (uint64 *) saved_fp;
     }
     printf("backtrace here\n");
 }
