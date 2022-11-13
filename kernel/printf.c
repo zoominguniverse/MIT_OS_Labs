@@ -146,8 +146,9 @@ backtrace()
     while(fp<up&&fp>down){
         uint64 ra = frame[-1];
         uint64 saved_fp = frame[-2];
-        printf("return address:%p\n",ra);
-        printf("saved frame pointer:%p\n",saved_fp);
+//        printf("return address:%p\n",ra);
+//        printf("saved frame pointer:%p\n",saved_fp);
+        printf("%p\n",ra);
         frame = (uint64 *) saved_fp;
         fp = saved_fp;
     }
