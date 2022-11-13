@@ -12,9 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment=" Insert a call to backtrace in sys_sleep">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="调用的时候要加；" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,7 +68,7 @@
       <workItem from="1667895504333" duration="705000" />
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
-      <workItem from="1668325471170" duration="3017000" />
+      <workItem from="1668325471170" duration="3447000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -156,7 +154,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668328801057</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="修改gitignore&#10;文件不再提交workspace.xml">
+      <created>1668329078834</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1668329078834</updated>
+    </task>
+    <task id="LOCAL-00014" summary="调用的时候要加；">
+      <created>1668329284808</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1668329284808</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +209,8 @@
     <MESSAGE value="打印一些信息" />
     <MESSAGE value="Add the prototype for your backtrace() to kernel/defs.h so that you can invoke backtrace in sys_sleep." />
     <MESSAGE value=" Insert a call to backtrace in sys_sleep" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Insert a call to backtrace in sys_sleep" />
+    <MESSAGE value="修改gitignore&#10;文件不再提交workspace.xml" />
+    <MESSAGE value="调用的时候要加；" />
+    <option name="LAST_COMMIT_MESSAGE" value="调用的时候要加；" />
   </component>
 </project>
