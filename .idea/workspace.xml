@@ -12,9 +12,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="保存现场并且恢复现场（搞得跟犯罪似的">
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="debug&#10;应该是在每次时钟中断都调用那个load保存trapframe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/sysproc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/sysproc.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kernel/trap.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/trap.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +74,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="5672000" />
+      <workItem from="1668400872050" duration="7263000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -378,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668407848775</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="debug&#10;应该是在每次时钟中断都调用那个load保存trapframe">
+      <created>1668408552926</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1668408552926</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -408,7 +414,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="实现了函数调用栈的上下界确定" />
     <MESSAGE value="实现一波儿打印返回地址和上一个栈帧地址" />
     <MESSAGE value="遍历时更新栈帧出现问题 导致循环打印&#10;这时候我们需要更新frame而不是fp&#10;这里用到了一个技巧就是frame[-1]直接-8bytes了&#10;因为frame是uint64的&#10;修改错误之后我们可得" />
     <MESSAGE value="fp也需要相应更新 否则就panic了" />
@@ -433,6 +438,7 @@
     <MESSAGE value="在freeproc中释放掉新分配的saved_trapframe" />
     <MESSAGE value="实现一个load函数把一个trapframe里面的32个寄存器加载到另一个trapframe里面的32个寄存器里面" />
     <MESSAGE value="保存现场并且恢复现场（搞得跟犯罪似的" />
-    <option name="LAST_COMMIT_MESSAGE" value="保存现场并且恢复现场（搞得跟犯罪似的" />
+    <MESSAGE value="debug&#10;应该是在每次时钟中断都调用那个load保存trapframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="debug&#10;应该是在每次时钟中断都调用那个load保存trapframe" />
   </component>
 </project>

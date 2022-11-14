@@ -10,6 +10,7 @@ struct spinlock tickslock;
 uint ticks;
 
 extern char trampoline[], uservec[], userret[];
+extern void load(struct *trapframe,struct *trapframe);
 
 // in kernelvec.S, calls kerneltrap().
 void kernelvec();
