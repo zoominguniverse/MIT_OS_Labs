@@ -107,4 +107,5 @@ struct proc {
   int ticks;                   //滴答
   int ticks_cnt;               //从上一次调用到报警处理程序间经历了多少滴答
   uint64 handler;              //fn
+  struct trapframe *saved_trapframe;//保存的寄存器
 };
