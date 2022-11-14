@@ -12,9 +12,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="后期调试需要">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="放入user/user.h两个系统调用函数的正确声明">
+      <change beforePath="$PROJECT_DIR$/user/usys.pl" beforeDir="false" afterPath="$PROJECT_DIR$/user/usys.pl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +71,7 @@
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
-      <workItem from="1668391724499" duration="375000" />
+      <workItem from="1668391724499" duration="690000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -249,7 +248,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668353494211</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="在XV6的存储库中找到名为user/alarmtest.c的文件。将其添加到Makefile">
+      <created>1668392146637</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1668392146637</updated>
+    </task>
+    <task id="LOCAL-00027" summary="放入user/user.h两个系统调用函数的正确声明">
+      <created>1668392273196</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1668392273196</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,7 +292,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="hint 2 add a prototype for the system call to user/user.h" />
     <MESSAGE value="add a syscall number tokernel/syscall.h." />
     <MESSAGE value="adjust syscall.c (add syscall according to example" />
     <MESSAGE value="Add a sys_trace() function in kernel/sysproc.c that implements the new system call by remembering its argument in a new variable in the proc structure (see kernel/proc.h). The functions to retrieve system call arguments from user space are in kernel/syscall.c, and you can see examples of their use in kernel/sysproc.c." />
@@ -303,6 +315,8 @@
     <MESSAGE value="修改代码格式&#10;使之打印信息的格式与网站参考一致" />
     <MESSAGE value="最后一句话删掉" />
     <MESSAGE value="后期调试需要" />
-    <option name="LAST_COMMIT_MESSAGE" value="后期调试需要" />
+    <MESSAGE value="在XV6的存储库中找到名为user/alarmtest.c的文件。将其添加到Makefile" />
+    <MESSAGE value="放入user/user.h两个系统调用函数的正确声明" />
+    <option name="LAST_COMMIT_MESSAGE" value="放入user/user.h两个系统调用函数的正确声明" />
   </component>
 </project>
