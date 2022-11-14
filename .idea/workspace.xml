@@ -12,8 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="定义一下保存现场时保存的寄存器">
-      <change beforePath="$PROJECT_DIR$/kernel/proc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/proc.c" afterDir="false" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="在freeproc中释放掉新分配的saved_trapframe">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/sysproc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/sysproc.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="3779000" />
+      <workItem from="1668400872050" duration="4613000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -348,7 +349,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668406159665</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="在新建进程时为新定义的saved_trapframe alloc内存">
+      <created>1668406660172</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1668406660172</updated>
+    </task>
+    <task id="LOCAL-00041" summary="在freeproc中释放掉新分配的saved_trapframe">
+      <created>1668406760293</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1668406760293</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,8 +393,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="The GCC compiler stores the frame pointer of the currently executing function in the register s0" />
-    <MESSAGE value="依旧是为了避免出现那个workspace不一致的问题" />
     <MESSAGE value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
     <MESSAGE value="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅/ .ℎ。这些数字有助于backtrace终止其遍历。" />
     <MESSAGE value="实现了函数调用栈的上下界确定" />
@@ -403,6 +416,8 @@
     <MESSAGE value="初始化新增的ticks_cnt字段使之经历的滴答数初始化为0" />
     <MESSAGE value="产生了计时器中断时操纵进程的报警滴答&#10;并且重置ticks_cnt 以实现周期性操作" />
     <MESSAGE value="定义一下保存现场时保存的寄存器" />
-    <option name="LAST_COMMIT_MESSAGE" value="定义一下保存现场时保存的寄存器" />
+    <MESSAGE value="在新建进程时为新定义的saved_trapframe alloc内存" />
+    <MESSAGE value="在freeproc中释放掉新分配的saved_trapframe" />
+    <option name="LAST_COMMIT_MESSAGE" value="在freeproc中释放掉新分配的saved_trapframe" />
   </component>
 </project>

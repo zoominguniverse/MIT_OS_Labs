@@ -92,6 +92,46 @@ sys_uptime(void)
   return xticks;
 }
 
+
+void load(struct trapframe *old , struct trapframe *new){
+    /*   0 */ new->kernel_satp=old->kernel_satp ;   // kernel page table
+    /*   8 */ new->kernel_sp=old->kernel_sp;     // top of process's kernel stack
+    /*  16 */ new->kernel_trap=old->kernel_trap;   // usertrap()
+    /*  24 */ new->epc=old->epc;           // saved user program counter
+    /*  32 */ new->kernel_hartid=old->kernel_hartid; // saved kernel tp
+    /*  40 */ new->ra=old->ra;
+    /*  48 */ new->sp=old->sp;
+    /*  56 */ new->gp=old->gp;
+    /*  64 */ new->tp=old->tp;
+    /*  72 */ new->t0=old->t0;
+    /*  80 */ new->t1=old->t1;
+    /*  88 */ new->t2=old->t2;
+    /*  96 */ new->s0=old->s0;
+    /* 104 */ new->s1=old->s1;
+    /* 112 */ new->a0=old->a0;
+    /* 120 */ new->a1=old->a1;
+    /* 128 */ new->a2=old->a2;
+    /* 136 */ new->a3=old->a3;
+    /* 144 */ new->a4=old->a4;
+    /* 152 */ new->a5=old->a5;
+    /* 160 */ new->a6=old->a6;
+    /* 168 */ new->a7=old->a7;
+    /* 176 */ new->s2=old->s2;
+    /* 184 */ new->s3=old->s3;
+    /* 192 */ new->s4=old->s4;
+    /* 200 */ new->s5=old->s5;
+    /* 208 */ new->s6=old->s6;
+    /* 216 */ new->s7=old->s7;
+    /* 224 */ new->s8=old->s8;
+    /* 232 */ new->s9=old->s9;
+    /* 240 */ new->s10=old->s10;
+    /* 248 */ new->s11=old->s11;
+    /* 256 */ new->t3=old->t3;
+    /* 264 */ new->t4=old->t4;
+    /* 272 */ new->t5=old->t5;
+    /* 280 */ new->t6=old->t6;
+}
+
 uint64
 sys_sigalarm(void){
     struct proc *p = myproc();
