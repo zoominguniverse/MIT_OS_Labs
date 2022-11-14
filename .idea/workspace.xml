@@ -12,10 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="刚才的尝试是无效的">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/sysproc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/sysproc.c" afterDir="false" />
-    </list>
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="用GDB调试时发现这个执行完后a0会变成0&#10;于是充分理由怀疑是sigreturn在作妖&#10;我们找一个特殊数字尝试一下" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,14 +71,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="11860000" />
-    </task>
-    <task id="LOCAL-00002" summary="add a syscall number tokernel/syscall.h.">
-      <created>1666078872941</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1666078872941</updated>
+      <workItem from="1668400872050" duration="12336000" />
     </task>
     <task id="LOCAL-00003" summary="add a syscall number tokernel/syscall.h.">
       <created>1666079767551</created>
@@ -419,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668414296466</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="用GDB调试时发现这个执行完后a0会变成0&#10;于是充分理由怀疑是sigreturn在作妖&#10;我们找一个特殊数字尝试一下">
+      <created>1668415574064</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1668415574064</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="在XV6的存储库中找到名为user/alarmtest.c的文件。将其添加到Makefile" />
     <MESSAGE value="放入user/user.h两个系统调用函数的正确声明" />
     <MESSAGE value="更新usys.pl" />
     <MESSAGE value="更新syscall.h" />
@@ -474,6 +470,7 @@
     <MESSAGE value="sysreturn是一个系统调用&#10;我们需要恢复它的返回值到a0中" />
     <MESSAGE value="尝试恢复a0" />
     <MESSAGE value="刚才的尝试是无效的" />
-    <option name="LAST_COMMIT_MESSAGE" value="刚才的尝试是无效的" />
+    <MESSAGE value="用GDB调试时发现这个执行完后a0会变成0&#10;于是充分理由怀疑是sigreturn在作妖&#10;我们找一个特殊数字尝试一下" />
+    <option name="LAST_COMMIT_MESSAGE" value="用GDB调试时发现这个执行完后a0会变成0&#10;于是充分理由怀疑是sigreturn在作妖&#10;我们找一个特殊数字尝试一下" />
   </component>
 </project>
