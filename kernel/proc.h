@@ -108,4 +108,5 @@ struct proc {
   int ticks_cnt;               //从上一次调用到报警处理程序间经历了多少滴答
   uint64 handler;              //fn
   struct trapframe *saved_trapframe;//保存的寄存器
+  int handler_working;          //hander正在被调用执行
 };

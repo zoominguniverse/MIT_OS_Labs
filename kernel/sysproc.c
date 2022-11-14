@@ -151,6 +151,7 @@ uint64
 sys_sigreturn(void){
     struct proc *p = myproc();
     load(p->saved_trapframe,p->trapframe);
+    p->handler_working = 0;
     return 0;
 }
 

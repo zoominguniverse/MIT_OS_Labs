@@ -83,9 +83,10 @@ usertrap(void)
       //产生了计时器中断，您只想操纵进程的报警滴
       if (p->ticks > 0) {
         p->ticks_cnt++;
-        if(p->ticks_cnt == p->ticks){
+        if(p->handler_working==0&&p->ticks_cnt == p->ticks){
             p->ticks_cnt = 0;
             load(p->trapframe,p->saved_trapframe);
+            p->handler_working = 1;
             p->trapframe->epc = p->handler;
         }
       }
