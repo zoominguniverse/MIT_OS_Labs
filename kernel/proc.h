@@ -105,5 +105,6 @@ struct proc {
   struct inode *cwd;           // Current directory
   char name[16];               // Process name (debugging)
   int ticks;                   //滴答
+  int ticks_cnt;               //从上一次调用到报警处理程序间经历了多少滴答
   uint64 handler;              //fn
 };

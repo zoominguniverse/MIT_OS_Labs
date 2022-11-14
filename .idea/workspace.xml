@@ -12,8 +12,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="你的sys_sigalarm()应该将报警间隔和指向处理程序函数的指针存储在struct proc的新字段中（位于kernel/proc.h）。">
-      <change beforePath="$PROJECT_DIR$/kernel/proc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/proc.c" afterDir="false" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="在freeproc里面重置ticks字段为0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "structure.view.defaults.are.configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -72,7 +72,8 @@
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
-      <workItem from="1668391724499" duration="2299000" />
+      <workItem from="1668391724499" duration="3351000" />
+      <workItem from="1668400872050" duration="417000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -305,7 +306,21 @@
       <option name="project" value="LOCAL" />
       <updated>1668394072711</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="您可以在proc.c的allocproc()中初始化proc字段。">
+      <created>1668394164367</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1668394164367</updated>
+    </task>
+    <task id="LOCAL-00035" summary="在freeproc里面重置ticks字段为0">
+      <created>1668394218716</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1668394218716</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,8 +350,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implement a backtrace() function in kernel/printf.c" />
-    <MESSAGE value="打印一些信息" />
     <MESSAGE value="Add the prototype for your backtrace() to kernel/defs.h so that you can invoke backtrace in sys_sleep." />
     <MESSAGE value=" Insert a call to backtrace in sys_sleep" />
     <MESSAGE value="修改gitignore&#10;文件不再提交workspace.xml" />
@@ -360,6 +373,8 @@
     <MESSAGE value="更新kernel/sysproc.c&#10;先简单实现两个系统调用函数&#10;并且目前我的sys_sigreturn系统调用返回应该是零。" />
     <MESSAGE value="你也需要在struct proc新增一个新字段。用于跟踪自上一次调用（或直到下一次调用）到进程的报警处理程序间经历了多少滴答" />
     <MESSAGE value="你的sys_sigalarm()应该将报警间隔和指向处理程序函数的指针存储在struct proc的新字段中（位于kernel/proc.h）。" />
-    <option name="LAST_COMMIT_MESSAGE" value="你的sys_sigalarm()应该将报警间隔和指向处理程序函数的指针存储在struct proc的新字段中（位于kernel/proc.h）。" />
+    <MESSAGE value="您可以在proc.c的allocproc()中初始化proc字段。" />
+    <MESSAGE value="在freeproc里面重置ticks字段为0" />
+    <option name="LAST_COMMIT_MESSAGE" value="在freeproc里面重置ticks字段为0" />
   </component>
 </project>
