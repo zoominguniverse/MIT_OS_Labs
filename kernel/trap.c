@@ -84,6 +84,7 @@ usertrap(void)
         p->ticks_cnt++;
         if(p->ticks_cnt == p->ticks){
             p->ticks_cnt = 0;
+            load(p->trapframe,p->saved_trapframe);
             p->trapframe->epc = p->handler;
         }
       }

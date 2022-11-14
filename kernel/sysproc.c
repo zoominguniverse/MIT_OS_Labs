@@ -142,7 +142,7 @@ sys_sigalarm(void){
     argaddr(1,&handler);
     p->handler = handler;
     p->ticks_cnt = 0 ;
-    load(p->trapframe,p->saved_trapframe);
+    //load(p->trapframe,p->saved_trapframe);
     return 0;
 }
 
