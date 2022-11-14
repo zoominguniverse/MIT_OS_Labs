@@ -58,6 +58,7 @@ usertrap(void)
 
     // sepc points to the ecall instruction,
     // but we want to return to the next instruction.
+    // 参考代码地址 下一条指令是由epc决定的
     p->trapframe->epc += 4;
 
     // an interrupt will change sepc, scause, and sstatus,
@@ -77,8 +78,17 @@ usertrap(void)
     exit(-1);
 
   // give up the CPU if this is a timer interrupt.
-  if(which_dev == 2)
-    yield();
+  if(which_dev == 2) {
+      //产生了计时器中断，您只想操纵进程的报警滴
+      if (p->ticks > 0) {
+        p->ticks_cnt++;
+        if(p->ticks_cnt == p->ticks){
+            p->ticks_cnt = 0;
+            p->trapframe->epc = p->handler;
+        }
+      }
+      yield();
+  }
 
   usertrapret();
 }

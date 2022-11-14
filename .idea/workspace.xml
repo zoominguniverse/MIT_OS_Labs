@@ -12,7 +12,10 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="初始化新增的ticks_cnt字段使之经历的滴答数初始化为0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel/trap.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/trap.c" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +74,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="786000" />
+      <workItem from="1668400872050" duration="1517000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -325,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668401517978</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="初始化新增的ticks_cnt字段使之经历的滴答数初始化为0">
+      <created>1668401800951</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1668401800951</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +365,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" Insert a call to backtrace in sys_sleep" />
     <MESSAGE value="修改gitignore&#10;文件不再提交workspace.xml" />
     <MESSAGE value="调用的时候要加；" />
     <MESSAGE value="The GCC compiler stores the frame pointer of the currently executing function in the register s0" />
@@ -380,6 +389,7 @@
     <MESSAGE value="您可以在proc.c的allocproc()中初始化proc字段。" />
     <MESSAGE value="在freeproc里面重置ticks字段为0" />
     <MESSAGE value="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答" />
-    <option name="LAST_COMMIT_MESSAGE" value="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答" />
+    <MESSAGE value="初始化新增的ticks_cnt字段使之经历的滴答数初始化为0" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化新增的ticks_cnt字段使之经历的滴答数初始化为0" />
   </component>
 </project>
