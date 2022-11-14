@@ -12,10 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="更新kernel/syscall.c">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kernel/sysproc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/sysproc.c" afterDir="false" />
-    </list>
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="更新kernel/sysproc.c&#10;先简单实现两个系统调用函数&#10;并且目前我的sys_sigreturn系统调用返回应该是零。" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,7 +69,7 @@
       <workItem from="1667969967589" duration="856000" />
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
-      <workItem from="1668391724499" duration="1721000" />
+      <workItem from="1668391724499" duration="1937000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -284,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668392727941</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="更新kernel/sysproc.c&#10;先简单实现两个系统调用函数&#10;并且目前我的sys_sigreturn系统调用返回应该是零。">
+      <created>1668393620005</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1668393620005</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +318,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjust  mistakes(forget to add (void) to make a function" />
     <MESSAGE value="Add $U/_trace to UPROGS in Makefile" />
     <MESSAGE value="按照第五六题问题&#10;添加这三行代码" />
     <MESSAGE value="Implement a backtrace() function in kernel/printf.c" />
@@ -339,6 +342,7 @@
     <MESSAGE value="更新usys.pl" />
     <MESSAGE value="更新syscall.h" />
     <MESSAGE value="更新kernel/syscall.c" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新kernel/syscall.c" />
+    <MESSAGE value="更新kernel/sysproc.c&#10;先简单实现两个系统调用函数&#10;并且目前我的sys_sigreturn系统调用返回应该是零。" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新kernel/sysproc.c&#10;先简单实现两个系统调用函数&#10;并且目前我的sys_sigreturn系统调用返回应该是零。" />
   </component>
 </project>
