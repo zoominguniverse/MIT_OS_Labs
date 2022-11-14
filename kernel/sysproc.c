@@ -150,10 +150,8 @@ sys_sigalarm(void){
 uint64
 sys_sigreturn(void){
     struct proc *p = myproc();
-    uint64 ret_val=p->trapframe->a0;
     load(p->saved_trapframe,p->trapframe);
     p->handler_working = 0;
-    p->trapframe->a0 = ret_val;
     return 0;
 }
 

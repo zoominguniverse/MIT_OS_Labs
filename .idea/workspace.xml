@@ -12,7 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="sysreturn是一个系统调用&#10;我们需要恢复它的返回值到a0中" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="尝试恢复a0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,7 +73,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="9089000" />
+      <workItem from="1668400872050" duration="10383000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -409,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668412646478</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="尝试恢复a0">
+      <created>1668412874450</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1668412874450</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +448,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="最后一句话删掉" />
     <MESSAGE value="后期调试需要" />
     <MESSAGE value="在XV6的存储库中找到名为user/alarmtest.c的文件。将其添加到Makefile" />
     <MESSAGE value="放入user/user.h两个系统调用函数的正确声明" />
@@ -464,6 +472,7 @@
     <MESSAGE value="debug&#10;外部引用应该是*在最后面" />
     <MESSAGE value="Prevent re-entrant calls to the handler----if a handler hasn't returned yet, the kernel shouldn't call it again. &#10;在proc.h中声明新变量&#10;并且在proc.c中对其初始化0&#10;之后在handler被调用执行时赋值为1（当且仅当为0时才执行&#10;之后在sigreturn中再次重置为0" />
     <MESSAGE value="sysreturn是一个系统调用&#10;我们需要恢复它的返回值到a0中" />
-    <option name="LAST_COMMIT_MESSAGE" value="sysreturn是一个系统调用&#10;我们需要恢复它的返回值到a0中" />
+    <MESSAGE value="尝试恢复a0" />
+    <option name="LAST_COMMIT_MESSAGE" value="尝试恢复a0" />
   </component>
 </project>
