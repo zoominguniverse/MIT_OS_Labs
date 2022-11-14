@@ -12,8 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="在freeproc中释放掉新分配的saved_trapframe">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="实现一个load函数把一个trapframe里面的32个寄存器加载到另一个trapframe里面的32个寄存器里面">
       <change beforePath="$PROJECT_DIR$/kernel/sysproc.c" beforeDir="false" afterPath="$PROJECT_DIR$/kernel/sysproc.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +73,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="4613000" />
+      <workItem from="1668400872050" duration="4969000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -363,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668406760293</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="实现一个load函数把一个trapframe里面的32个寄存器加载到另一个trapframe里面的32个寄存器里面">
+      <created>1668407720763</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1668407720763</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,7 +399,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="call this function in backtrace to read the current frame pointer. r_fp() uses in-line assembly to read s0." />
     <MESSAGE value="xv6为 xv6 内核中的每个stack在 PAGE 地址对齐处分配一个页面。可以使用PGROUNDDOWN(fp)和PGROUNDUP(fp)计算堆栈页面的顶部和底部地址。请参阅/ .ℎ。这些数字有助于backtrace终止其遍历。" />
     <MESSAGE value="实现了函数调用栈的上下界确定" />
     <MESSAGE value="实现一波儿打印返回地址和上一个栈帧地址" />
@@ -418,6 +423,7 @@
     <MESSAGE value="定义一下保存现场时保存的寄存器" />
     <MESSAGE value="在新建进程时为新定义的saved_trapframe alloc内存" />
     <MESSAGE value="在freeproc中释放掉新分配的saved_trapframe" />
-    <option name="LAST_COMMIT_MESSAGE" value="在freeproc中释放掉新分配的saved_trapframe" />
+    <MESSAGE value="实现一个load函数把一个trapframe里面的32个寄存器加载到另一个trapframe里面的32个寄存器里面" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现一个load函数把一个trapframe里面的32个寄存器加载到另一个trapframe里面的32个寄存器里面" />
   </component>
 </project>

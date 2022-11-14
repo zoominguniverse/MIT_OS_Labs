@@ -142,12 +142,15 @@ sys_sigalarm(void){
     argaddr(1,&handler);
     p->handler = handler;
     p->ticks_cnt = 0 ;
+    load(p->trapframe,p->saved_trapframe);
     return 0;
 }
 
 
 uint64
 sys_sigreturn(void){
+    struct proc *p = myproc();
+    load(p->saved_trapframe,p->trapframe);
     return 0;
 }
 
