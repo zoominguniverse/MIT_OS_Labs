@@ -92,3 +92,19 @@ sys_uptime(void)
   return xticks;
 }
 
+uint64
+sys_sigalarm(void){
+    int ticks;
+    argint(0,&ticks);
+    uint64 handler;
+    argaddr(1,&handler);
+    return 0;
+}
+
+
+uint64
+sys_sigreturn(void){
+    return 0;
+}
+
+
