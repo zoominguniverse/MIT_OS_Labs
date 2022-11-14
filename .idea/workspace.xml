@@ -12,9 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="在freeproc里面重置ticks字段为0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="29a1412f-6a4a-4f24-bb20-7949228d1477" name="Changes" comment="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -73,7 +71,7 @@
       <workItem from="1668247967906" duration="1933000" />
       <workItem from="1668325471170" duration="11562000" />
       <workItem from="1668391724499" duration="3351000" />
-      <workItem from="1668400872050" duration="417000" />
+      <workItem from="1668400872050" duration="786000" />
     </task>
     <task id="LOCAL-00001" summary="hint 2 add a prototype for the system call to user/user.h">
       <created>1666078019634</created>
@@ -320,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668394218716</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答">
+      <created>1668401517978</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1668401517978</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +355,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add the prototype for your backtrace() to kernel/defs.h so that you can invoke backtrace in sys_sleep." />
     <MESSAGE value=" Insert a call to backtrace in sys_sleep" />
     <MESSAGE value="修改gitignore&#10;文件不再提交workspace.xml" />
     <MESSAGE value="调用的时候要加；" />
@@ -375,6 +379,7 @@
     <MESSAGE value="你的sys_sigalarm()应该将报警间隔和指向处理程序函数的指针存储在struct proc的新字段中（位于kernel/proc.h）。" />
     <MESSAGE value="您可以在proc.c的allocproc()中初始化proc字段。" />
     <MESSAGE value="在freeproc里面重置ticks字段为0" />
-    <option name="LAST_COMMIT_MESSAGE" value="在freeproc里面重置ticks字段为0" />
+    <MESSAGE value="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答" />
+    <option name="LAST_COMMIT_MESSAGE" value="在struct proc 增加新字段 ticks_cnt 用于记录从上一次调用到报警处理程序间经历了多少滴答" />
   </component>
 </project>

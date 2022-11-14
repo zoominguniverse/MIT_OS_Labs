@@ -101,6 +101,7 @@ sys_sigalarm(void){
     uint64 handler;
     argaddr(1,&handler);
     p->handler = handler;
+    p->ticks_cnt = 0 ;
     return 0;
 }
 
