@@ -321,6 +321,7 @@ uvmcopy(pagetable_t old, pagetable_t new, uint64 sz)
     pa = PTE2PA(*pte);
     flags = PTE_FLAGS(*pte);
     *pte = *pte & (~PTE_W);
+    *pte = *pte | PTE_COW;
 //    if((mem = kalloc()) == 0)
 //      goto err;
 //    memmove(mem, (char*)pa, PGSIZE);
