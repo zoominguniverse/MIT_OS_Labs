@@ -457,3 +457,18 @@ is_cow_fault(pagetable_t pagetable,uint64 va){
     }
     return 0;
 }
+
+int
+cow_alloc(pagetable_t pagetable.uint64 va){
+    pte_t *pte = walk(pagetable,va,0);
+    uint64 pa = PTE2PA(pte);
+    //减少引用计数 这个后续实现比如说uvmunmap()之类的啦
+    if((mem = kalloc()) == 0)
+      goto err;
+    memmove(mem, (char*)pa, PGSIZE);
+    int new_flags = PTE_FLAGS(pte) & (~PTE_COW);
+    if(mappages(new, i, PGSIZE, mem, flags) != 0){
+        kfree(mem);
+        goto err;
+    }
+}
