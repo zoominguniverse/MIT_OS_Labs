@@ -442,3 +442,12 @@ copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)
     return -1;
   }
 }
+
+int
+is_cow_fault(pagetable_t pagetable,uint64 va){
+    pte_t *pte = walk(pagetable,va,0);
+    if(*pte & PTE_COW){
+        return 1;
+    }
+    return 0;
+}
