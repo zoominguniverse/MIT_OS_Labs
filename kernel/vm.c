@@ -302,6 +302,9 @@ uvmfree(pagetable_t pagetable, uint64 sz)
 // physical memory.
 // returns 0 on success, -1 on failure.
 // frees any allocated pages on failure.
+
+//这里找到了uvmcopy
+
 int
 uvmcopy(pagetable_t old, pagetable_t new, uint64 sz)
 {
