@@ -1,6 +1,8 @@
 #include "kernel/types.h"
 #include "kernel/stat.h"
 #include "user/user.h"
+#include "kernel/spinlock.h"
+#include "kernel/param.h"
 #include "kernel/proc.h"
 
 /* Possible states of a thread: */
