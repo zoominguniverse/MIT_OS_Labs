@@ -14,6 +14,7 @@
 struct thread {
   char       stack[STACK_SIZE]; /* the thread's stack */
   int        state;             /* FREE, RUNNING, RUNNABLE */
+  struct context context;       /*Current thread's context(including ra,sp,regs)*/
 };
 struct thread all_thread[MAX_THREAD];
 struct thread *current_thread;
