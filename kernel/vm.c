@@ -459,7 +459,7 @@ is_cow_fault(pagetable_t pagetable,uint64 va){
 }
 
 int
-cow_alloc(pagetable_t pagetable.uint64 va){
+cow_alloc(pagetable_t pagetable,uint64 va){
     pte_t *pte = walk(pagetable,va,0);
     uint64 pa = PTE2PA(pte);
     //减少引用计数 这个后续实现比如说uvmunmap()之类的啦
