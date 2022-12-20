@@ -428,6 +428,18 @@ bmap(struct inode *ip, uint bn)
     }
     bp = bread(ip->dev, addr);
     a = (uint*)bp->data;
+    // Load indirect block, allocating if necessary.
+    if((addr = a[bn / NINDIRECT]) == 0) {
+        addr = balloc(ip->dev)
+        if(addr) {
+            a[bn / NINDIRECT] = addr;
+            log_write(bp);
+        }
+    }
+    brelse(bp);
+    bp = bread(ip->dev, addr);
+    a = (uint*)bp->data;
+    bn %= NINDIRECT;
   }
 
   panic("bmap: out of range");
